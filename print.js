@@ -17,20 +17,26 @@ const sendMessageToPrinter = async (host, port, message) => {
 
 };
 
-const print = async (test) => {
-    const template = fs.readFileSync("sample.xml", {encoding: "utf8"});
-    console.log(test)
-    const sampleInputData = {
-        title: "Hello World",
-        date: "07-08-2021",  
-    };
-
-    const message = EscPos.getBufferFromTemplate(template, sampleInputData);
-
-    try{
-        connectToPrinter(PRINTER.host, PRINTER.port, message);
-    }catch(err){
-        console.log("some error", err);
-    }
+const print = async (orders) => {
+    // console.log(orders)
+    orders.map((order) => {
+        if(order.fulfillment == "PICKUP"){
+            // const template = fs.readFileSync("pickupOrder.xml", {encoding: "utf8"});
+            // const message = EscPos.getBufferFromTemplate(template, order);
+            // try{
+            //     connectToPrinter(PRINTER.host, PRINTER.port, message);
+            // }catch(err){
+            //     console.log("Error: ", err);
+            // }
+        }else{
+            const template = fs.readFileSync("deliveryOrder.xml", {encoding: "utf8"});
+            const message = EscPos.getBufferFromTemplate(template, order);
+            try{
+                connectToPrinter(PRINTER.host, PRINTER.port, message);
+            }catch(err){
+                console.log("Error: ", err);
+            }
+        }
+    })    
 };
 module.exports= print;

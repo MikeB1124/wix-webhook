@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <align mode="center">
+        <bold><text-line size="4.0">Trimana Grill</text-line></bold>
+        <text-line size="2.0">10920 Wilshire Blvd</text-line>
+        <text-line size="2.0">Los Angeles, CA 90024</text-line>
+    </align>
+    <line-feed/>
+
+    <align mode="center">
+        <bold><text-line size="6.0">{{fulfillment}}                {{customerName}}</text-line></bold>
+        <text-line size="3.0">{{dueDate}}</text-line>
+    </align>
+
+    <align mode="center">
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+        <text-line size="2.0">{{title}}</text-line>
+    </align>
+    <line-feed/>
+
+
+    <align mode="center">
+        <text-line size="3.0">Sub-total:                {{totals.subtotal}}</text-line>
+        <text-line size="3.0">Tax:                {{totals.tax}}</text-line>
+        <text-line size="3.0">Total:                {{totals.total}}</text-line>
+    </align>
+
+    <line-feed/>
+
+    <paper-cut/>
+</document>
