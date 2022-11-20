@@ -47,7 +47,7 @@ function parseOrders(orders){
             let orderSchema = {
                 "id": order.id,
                 "customerName": order.customer.firstName + " " + order.customer.lastName,
-                "customerNumber": order.customer.phone,
+                "customerNumber": formatPhoneNumber(order.customer.phone),
                 "fulfillment": order.fulfillment.type,
                 "dueDate": order.fulfillment.promisedTime,
                 "items": order.lineItems,
@@ -80,13 +80,13 @@ function parseOrders(orders){
         }else{
             let orderSchema = {
                 "id": order.id,
-                "customerName": order.customer.firstName + order.customer.lastName,
-                "customerNumber": order.customer.phone,
+                "customerName": order.customer.firstName + " " + order.customer.lastName,
+                "customerNumber": formatPhoneNumber(order.customer.phone),
                 "fulfillment": order.fulfillment.type,
                 "dueDate": order.fulfillment.promisedTime,
                 "deliveryAddress": order.fulfillment.deliveryDetails.address.formatted,
                 "items": order.lineItems,
-                "paymentType": order.payments[0].method,
+                "paymentType": order.payments[0].method == "offline" ? "CASH" : "CARD",
                 "orderComment": order.comment,
                 "tax": order.totals.tax,
                 "tip": order.totals.tip ? order.totals.tip : "0.00",
@@ -99,7 +99,7 @@ function parseOrders(orders){
             }
 
             orderSchema.items.map((item, i) => {
-                orderSchema[`item${i}`] = `${item.quantity} X ${item.catalogReference.catalogItemName}......$${item.price}`
+                orderSchema[`item${i}`] = `${item.quantity} X ${item.catalogReference.catalogItemName}............$${item.price}`
 
                 item.dishOptions.map((option, j) => {
                     if(option.selectedChoices.length > 0){
@@ -137,5 +137,17 @@ function accept_orders(orders){
         })
     })
 }
+
+function formatPhoneNumber(phoneNumber){
+    let cleaned = ('' + phoneNumber).replace(/\D/g, '');
+    
+    let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  
+    if (match) {
+      return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    };
+  
+    return ""
+  };
 
 get_new_orders()

@@ -12,6 +12,7 @@
     <align mode="left">
         <bold><text-line size="8.0">Order Numebr: {{id}}</text-line></bold>
         <bold><text-line size="8.0">{{fulfillment}}: {{customerName}}</text-line></bold>
+        <bold><text-line size="8.0">Phone Number: {{customerNumber}}</text-line></bold>
         <bold><text-line size="8.0">Address: {{deliveryAddress}}</text-line></bold>
         <bold><text-line size="8.0">Payment: {{paymentType}}</text-line></bold>
         <bold><text-line size="8.0">DUE: {{dueDate}}</text-line></bold>
