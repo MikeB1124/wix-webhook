@@ -24,7 +24,7 @@ const print = async (orders) => {
         logger.info(order)
         console.log(order)
         if(order.fulfillment == "PICKUP"){
-            const template = fs.readFileSync(`./pickupTemplates/template${order.items.length}.xml`, {encoding: "utf8"});
+            const template = fs.readFileSync(`./wix-orders-check/wix-webhook/pickupTemplates/template${order.items.length}.xml`, {encoding: "utf8"});
             const message = EscPos.getBufferFromTemplate(template, order);
             try{
                 connectToPrinter(PRINTER.host, PRINTER.port, message);
@@ -33,7 +33,7 @@ const print = async (orders) => {
             }
         }else{
             console.log(orders.length)
-            const template = fs.readFileSync(`./deliveryTemplates/template${order.items.length}.xml`, {encoding: "utf8"});
+            const template = fs.readFileSync(`./wix-orders-check/wix-webhook/deliveryTemplates/template${order.items.length}.xml`, {encoding: "utf8"});
             const message = EscPos.getBufferFromTemplate(template, order);
             try{
                 connectToPrinter(PRINTER.host, PRINTER.port, message);

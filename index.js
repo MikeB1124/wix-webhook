@@ -28,13 +28,13 @@ async function get_new_orders(){
 
         print(orders)
 
-        // if(orderIDs.length > 0){
-        //     logger.info("New orders to accept")
-        //     logger.info("")
-        //     accept_orders(orderIDs)
-        // }else{
-        //     logger.info("No orders to accept")
-        // }
+        if(orderIDs.length > 0){
+            logger.info("New orders to accept")
+            logger.info("")
+            accept_orders(orderIDs)
+        }else{
+            logger.info("No orders to accept")
+        }
     });
 }
 
