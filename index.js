@@ -28,13 +28,13 @@ async function get_new_orders(){
 
         print(orders)
 
-        if(orderIDs.length > 0){
-            logger.info("New orders to accept")
-            logger.info("")
-            accept_orders(orderIDs)
-        }else{
-            logger.info("No orders to accept")
-        }
+        // if(orderIDs.length > 0){
+        //     logger.info("New orders to accept")
+        //     logger.info("")
+        //     accept_orders(orderIDs)
+        // }else{
+        //     logger.info("No orders to accept")
+        // }
     });
 }
 
@@ -43,7 +43,6 @@ function parseOrders(orders){
 
     orders.map((order) => {
         orderIDs.push(order.id)
-        // console.log(order)
         if(order.fulfillment.type == "PICKUP"){
             let orderSchema = {
                 "id": order.id,
@@ -55,12 +54,9 @@ function parseOrders(orders){
                 "paymentType": order.payments[0].method == "offline" ? "CASH" : "CARD",
                 "orderComment": order.comment,
                 "tax": order.totals.tax,
-                "tip": order.totals.tip,
+                "tip": order.totals.tip ? order.totals.tip : "0.00",
                 "subTotal": order.totals.subtotal,
                 "total": order.totals.total,
-                "test": {
-                    "hello": "all good baby"
-                }
             }
 
             if(order.comment){
@@ -88,13 +84,13 @@ function parseOrders(orders){
                 "customerNumber": order.customer.phone,
                 "fulfillment": order.fulfillment.type,
                 "dueDate": order.fulfillment.promisedTime,
-                "deliveryAddress": order.fulfillment.deliveryDetails,
+                "deliveryAddress": order.fulfillment.deliveryDetails.address.formatted,
                 "items": order.lineItems,
                 "paymentType": order.payments[0].method,
                 "orderComment": order.comment,
                 "tax": order.totals.tax,
-                "tip": order.totals.tip,
-                "subTotal": order.totals.subotal,
+                "tip": order.totals.tip ? order.totals.tip : "0.00",
+                "subTotal": order.totals.subtotal,
                 "total": order.totals.total,
             }
 
