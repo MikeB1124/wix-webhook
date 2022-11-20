@@ -34,7 +34,7 @@ function parseOrders(orders){
 
     orders.map((order) => {
         if(order.fulfillment.type == "PICKUP"){
-            parsedArray.push({
+            let orderSchema = {
                 "id": order.id,
                 "customerName": order.customer.firstName + " " + order.customer.lastName,
                 "customerNumber": order.customer.phone,
@@ -43,10 +43,22 @@ function parseOrders(orders){
                 "items": order.lineItems,
                 "paymentType": order.payments[0].method,
                 "orderComment": order.comment,
-                "totals": order.totals
+                "tax": order.totals.tax,
+                "subTotal": order.totals.subtotal,
+                "total": order.totals.total,
+                "test": {
+                    "hello": "all good baby"
+                }
+            }
+
+            orderSchema.items.map((item, i) => {
+                orderSchema[`item${i}`] = `${item.quantity} X ${item.catalogReference.catalogItemName}......$${item.price}`
             })
+
+
+            parsedArray.push(orderSchema)
         }else{
-            parsedArray.push({
+            let orderSchema = {
                 "id": order.id,
                 "customerName": order.customer.firstName + order.customer.lastName,
                 "customerNumber": order.customer.phone,
@@ -56,8 +68,16 @@ function parseOrders(orders){
                 "items": order.lineItems,
                 "paymentType": order.payments[0].method,
                 "orderComment": order.comment,
-                "totalAmount": order.payments[0].amount
+                "tax": order.totals.tax,
+                "subTotal": order.totals.subotal,
+                "total": order.totals.total,
+            }
+
+            orderSchema.items.map((item, i) => {
+                orderSchema[`item${i}`] = `${item.quantity} X ${item.catalogReference.catalogItemName}......$${item.price}`
             })
+
+            parsedArray.push(orderSchema)
         }
     })
 
