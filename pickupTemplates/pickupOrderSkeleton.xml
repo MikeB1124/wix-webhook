@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <align mode="center">
+        <bold><text-line size="8.0">Trimana Grill</text-line></bold>
+        <text-line size="3.0">10920 Wilshire Blvd</text-line>
+        <text-line size="3.0">Los Angeles, CA 90024</text-line>
+    </align>
+
+    <line-feed/>
+    <line-feed/>
+
+    <align mode="left">
+        <bold><text-line size="8.0">Order Numebr: {{id}}</text-line></bold>
+        <bold><text-line size="8.0">{{fulfillment}}: {{customerName}}</text-line></bold>
+        <bold><text-line size="8.0">Payment: {{paymentType}}</text-line></bold>
+        <bold><text-line size="8.0">DUE: {{dueDate}}</text-line></bold>
+    </align>
+
+    <line-feed/>
+    <line-feed/>
+   
+    <align mode="center">
+        <bold><text-line size="8.0">Items</text-line></bold>
+    </align>
+
+    <line-feed/>
+    <align mode="left">
+        <bold><text-line size="10.0">{{item0}}</text-line></bold>
+        <text-line size="3.0">{{item0Option0}}</text-line>
+        <text-line size="3.0">{{item0Option1}}</text-line>
+        <text-line size="3.0">{{item0Option2}}</text-line>
+        <text-line size="3.0">{{item0Option3}}</text-line>
+        <text-line size="3.0">{{item0Option4}}</text-line>
+        <text-line size="3.0">{{item0Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item1}}</text-line></bold>
+        <text-line size="3.0">{{item1Option0}}</text-line>
+        <text-line size="3.0">{{item1Option1}}</text-line>
+        <text-line size="3.0">{{item1Option2}}</text-line>
+        <text-line size="3.0">{{item1Option3}}</text-line>
+        <text-line size="3.0">{{item1Option4}}</text-line>
+        <text-line size="3.0">{{item1Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item2}}</text-line></bold>
+        <text-line size="3.0">{{item2Option0}}</text-line>
+        <text-line size="3.0">{{item2Option1}}</text-line>
+        <text-line size="3.0">{{item2Option2}}</text-line>
+        <text-line size="3.0">{{item2Option3}}</text-line>
+        <text-line size="3.0">{{item2Option4}}</text-line>
+        <text-line size="3.0">{{item2Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item3}}</text-line></bold>
+        <text-line size="3.0">{{item3Option0}}</text-line>
+        <text-line size="3.0">{{item3Option1}}</text-line>
+        <text-line size="3.0">{{item3Option2}}</text-line>
+        <text-line size="3.0">{{item3Option3}}</text-line>
+        <text-line size="3.0">{{item3Option4}}</text-line>
+        <text-line size="3.0">{{item3Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item4}}</text-line></bold>
+        <text-line size="3.0">{{item4Option0}}</text-line>
+        <text-line size="3.0">{{item4Option1}}</text-line>
+        <text-line size="3.0">{{item4Option2}}</text-line>
+        <text-line size="3.0">{{item4Option3}}</text-line>
+        <text-line size="3.0">{{item4Option4}}</text-line>
+        <text-line size="3.0">{{item4Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item5}}</text-line></bold>
+        <text-line size="3.0">{{item5Option0}}</text-line>
+        <text-line size="3.0">{{item5Option2}}</text-line>
+        <text-line size="3.0">{{item5Option3}}</text-line>
+        <text-line size="3.0">{{item5Option4}}</text-line>
+        <text-line size="3.0">{{item5Option5}}</text-line>
+        <text-line size="3.0">{{item5Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item6}}</text-line></bold>
+        <text-line size="3.0">{{item6Option0}}</text-line>
+        <text-line size="3.0">{{item6Option2}}</text-line>
+        <text-line size="3.0">{{item6Option3}}</text-line>
+        <text-line size="3.0">{{item6Option4}}</text-line>
+        <text-line size="3.0">{{item6Option5}}</text-line>
+        <text-line size="3.0">{{item6Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item7}}</text-line></bold>
+        <text-line size="3.0">{{item7Option0}}</text-line>
+        <text-line size="3.0">{{item7Option2}}</text-line>
+        <text-line size="3.0">{{item7Option3}}</text-line>
+        <text-line size="3.0">{{item7Option4}}</text-line>
+        <text-line size="3.0">{{item7Option5}}</text-line>
+        <text-line size="3.0">{{item7Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item8}}</text-line></bold>
+        <text-line size="3.0">{{item8Option0}}</text-line>
+        <text-line size="3.0">{{item8Option2}}</text-line>
+        <text-line size="3.0">{{item8Option3}}</text-line>
+        <text-line size="3.0">{{item8Option4}}</text-line>
+        <text-line size="3.0">{{item8Option5}}</text-line>
+        <text-line size="3.0">{{item8Comment}}</text-line>
+        <line-feed/>
+        <bold><text-line size="10.0">{{item9}}</text-line></bold>
+        <text-line size="3.0">{{item9Option0}}</text-line>
+        <text-line size="3.0">{{item9Option2}}</text-line>
+        <text-line size="3.0">{{item9Option3}}</text-line>
+        <text-line size="3.0">{{item9Option4}}</text-line>
+        <text-line size="3.0">{{item9Option5}}</text-line>
+        <text-line size="3.0">{{item9Comment}}</text-line>
+        <line-feed/>
+    </align>
+    
+    <line-feed/>
+
+    <align mode="left">
+        <bold><text-line size="10.0">{{orderComment}}</text-line></bold>
+    </align>
+
+
+    <align mode="right">
+        <bold><text-line size="5.0">Sub-total: ${{subTotal}}</text-line></bold>
+        <bold><text-line size="5.0">Tax: ${{tax}}</text-line></bold>
+        <bold><text-line size="5.0">Tip: ${{tip}}</text-line></bold>
+        <bold><text-line size="5.0">Total: ${{total}}</text-line></bold>
+    </align>
+
+    <line-feed/>
+
+    <paper-cut/>
+</document>
