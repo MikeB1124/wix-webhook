@@ -47,7 +47,7 @@ function parseOrders(orders){
             let orderSchema = {
                 "id": order.id,
                 "customerName": order.customer.firstName + " " + order.customer.lastName,
-                "customerNumber": formatPhoneNumber(order.customer.phone),
+                "customerNumber": formatPhoneNumber(order.customer.phone.slice(2)),
                 "fulfillment": order.fulfillment.type,
                 "dueDate": order.fulfillment.promisedTime,
                 "items": order.lineItems,
@@ -67,7 +67,15 @@ function parseOrders(orders){
                 orderSchema[`item${i}`] = `${item.quantity} X ${item.catalogReference.catalogItemName}............$${item.price}`
                 item.dishOptions.map((option, j) => {
                     if(option.selectedChoices.length > 0){
-                        orderSchema[`item${i}Option${j}`] = `${option.name}: ${option.selectedChoices[0].catalogReference.catalogItemName}  +$${option.selectedChoices[0].price}`
+                        if(option.name == "Add-Ons"){
+                            let addOnsString = ""
+                            option.selectedChoices.map((selected) => {
+                                addOnsString = addOnsString + `${selected.catalogReference.catalogItemName} ($${selected.price}), `
+                            })
+                            orderSchema[`item${i}Option${j}`] = `${option.name}: ${addOnsString}`
+                        }else{
+                            orderSchema[`item${i}Option${j}`] = `${option.name}: ${option.selectedChoices[0].catalogReference.catalogItemName}  +$${option.selectedChoices[0].price}`
+                        }
                     }
                 })
                 if(item.comment){
@@ -81,7 +89,7 @@ function parseOrders(orders){
             let orderSchema = {
                 "id": order.id,
                 "customerName": order.customer.firstName + " " + order.customer.lastName,
-                "customerNumber": formatPhoneNumber(order.customer.phone),
+                "customerNumber": formatPhoneNumber(order.customer.phone.slice(2)),
                 "fulfillment": order.fulfillment.type,
                 "dueDate": order.fulfillment.promisedTime,
                 "deliveryAddress": order.fulfillment.deliveryDetails.address.formatted,
@@ -103,7 +111,15 @@ function parseOrders(orders){
 
                 item.dishOptions.map((option, j) => {
                     if(option.selectedChoices.length > 0){
-                        orderSchema[`item${i}Option${j}`] = `${option.name}: ${option.selectedChoices[0].catalogReference.catalogItemName}  +$${option.selectedChoices[0].price}`
+                        if(option.name == "Add-Ons"){
+                            let addOnsString = ""
+                            option.selectedChoices.map((selected) => {
+                                addOnsString = addOnsString + `${selected.catalogReference.catalogItemName} ($${selected.price}), `
+                            })
+                            orderSchema[`item${i}Option${j}`] = `${option.name}: ${addOnsString}`
+                        }else{
+                            orderSchema[`item${i}Option${j}`] = `${option.name}: ${option.selectedChoices[0].catalogReference.catalogItemName}  +$${option.selectedChoices[0].price}`
+                        }
                     }
                 })
                 if(item.comment){

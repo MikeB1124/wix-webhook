@@ -51,6 +51,8 @@
         <bold><text-line size="10.0">{{orderComment}}</text-line></bold>
     </align>
 
+    <line-feed/>
+
 
     <align mode="right">
         <bold><text-line size="5.0">Sub-total: ${{subTotal}}</text-line></bold>

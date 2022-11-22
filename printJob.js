@@ -32,7 +32,6 @@ const print = async (orders) => {
                 console.log("Error: ", err);
             }
         }else{
-            console.log(orders.length)
             const template = fs.readFileSync(`./wix-orders-check/wix-webhook/deliveryTemplates/template${order.items.length}.xml`, {encoding: "utf8"});
             const message = EscPos.getBufferFromTemplate(template, order);
             try{
