@@ -68,34 +68,34 @@
         <line-feed/>
         <bold><text-line size="10.0">{{item5}}</text-line></bold>
         <text-line size="3.0">{{item5Option0}}</text-line>
+        <text-line size="3.0">{{item5Option1}}</text-line>
         <text-line size="3.0">{{item5Option2}}</text-line>
         <text-line size="3.0">{{item5Option3}}</text-line>
         <text-line size="3.0">{{item5Option4}}</text-line>
-        <text-line size="3.0">{{item5Option5}}</text-line>
         <text-line size="3.0">{{item5Comment}}</text-line>
         <line-feed/>
         <bold><text-line size="10.0">{{item6}}</text-line></bold>
         <text-line size="3.0">{{item6Option0}}</text-line>
+        <text-line size="3.0">{{item6Option1}}</text-line>
         <text-line size="3.0">{{item6Option2}}</text-line>
         <text-line size="3.0">{{item6Option3}}</text-line>
         <text-line size="3.0">{{item6Option4}}</text-line>
-        <text-line size="3.0">{{item6Option5}}</text-line>
         <text-line size="3.0">{{item6Comment}}</text-line>
         <line-feed/>
         <bold><text-line size="10.0">{{item7}}</text-line></bold>
         <text-line size="3.0">{{item7Option0}}</text-line>
+        <text-line size="3.0">{{item7Option1}}</text-line>
         <text-line size="3.0">{{item7Option2}}</text-line>
         <text-line size="3.0">{{item7Option3}}</text-line>
         <text-line size="3.0">{{item7Option4}}</text-line>
-        <text-line size="3.0">{{item7Option5}}</text-line>
         <text-line size="3.0">{{item7Comment}}</text-line>
         <line-feed/>
         <bold><text-line size="10.0">{{item8}}</text-line></bold>
         <text-line size="3.0">{{item8Option0}}</text-line>
+        <text-line size="3.0">{{item8Option1}}</text-line>
         <text-line size="3.0">{{item8Option2}}</text-line>
         <text-line size="3.0">{{item8Option3}}</text-line>
         <text-line size="3.0">{{item8Option4}}</text-line>
-        <text-line size="3.0">{{item8Option5}}</text-line>
         <text-line size="3.0">{{item8Comment}}</text-line>
         <line-feed/>
     </align>

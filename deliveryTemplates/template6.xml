@@ -69,10 +69,10 @@
         <line-feed/>
         <bold><text-line size="10.0">{{item5}}</text-line></bold>
         <text-line size="3.0">{{item5Option0}}</text-line>
+        <text-line size="3.0">{{item5Option1}}</text-line>
         <text-line size="3.0">{{item5Option2}}</text-line>
         <text-line size="3.0">{{item5Option3}}</text-line>
         <text-line size="3.0">{{item5Option4}}</text-line>
-        <text-line size="3.0">{{item5Option5}}</text-line>
         <text-line size="3.0">{{item5Comment}}</text-line>
         <line-feed/>
     </align>

@@ -69,18 +69,18 @@
         <line-feed/>
         <bold><text-line size="10.0">{{item5}}</text-line></bold>
         <text-line size="3.0">{{item5Option0}}</text-line>
+        <text-line size="3.0">{{item5Option1}}</text-line>
         <text-line size="3.0">{{item5Option2}}</text-line>
         <text-line size="3.0">{{item5Option3}}</text-line>
         <text-line size="3.0">{{item5Option4}}</text-line>
-        <text-line size="3.0">{{item5Option5}}</text-line>
         <text-line size="3.0">{{item5Comment}}</text-line>
         <line-feed/>
         <bold><text-line size="10.0">{{item6}}</text-line></bold>
         <text-line size="3.0">{{item6Option0}}</text-line>
+        <text-line size="3.0">{{item6Option1}}</text-line>
         <text-line size="3.0">{{item6Option2}}</text-line>
         <text-line size="3.0">{{item6Option3}}</text-line>
         <text-line size="3.0">{{item6Option4}}</text-line>
-        <text-line size="3.0">{{item6Option5}}</text-line>
         <text-line size="3.0">{{item6Comment}}</text-line>
         <line-feed/>
     </align>
