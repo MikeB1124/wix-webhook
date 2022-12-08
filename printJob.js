@@ -5,8 +5,8 @@ const fs = require('fs');
 const logger = require('./logger')
 
 const PRINTER = {
-    devince_name: "EPSON_Printer",
-    host: "23.243.244.219",
+    device_name: "EPSON_Printer",
+    host: "47.137.17.228",
     port: 9100,
 };
 
